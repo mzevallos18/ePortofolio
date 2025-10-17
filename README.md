@@ -47,3 +47,5 @@ This project was developed as part of the CS-340: Client/Server Development cour
 1. **Install dependencies:**
    ```bash
    pip install dash pandas pymongo
+   mongod
+   python dashboard/dash_app.py
