@@ -1,51 +1,6 @@
-# Animal Shelter CRUD Dashboard
-
-## Overview
-This project was developed as part of the CS-340: Client/Server Development course and later enhanced for my CS-499 ePortfolio. It demonstrates full CRUD (Create, Read, Update, Delete) functionality using **Python**, **MongoDB**, and **Dash**. The project was completely reconstructed to restore all database operations and includes a dynamic web dashboard that allows users to visualize, search, and filter data on different animal types and breeds stored in the database.
-
----
-
-## Key Features
-- **CRUD Operations:** Full create, read, update, and delete functionality using MongoDB.
-- **Dash Web Dashboard:** Interactive visualization for exploring data such as animal type, breed, and adoption details.
-- **Filtering and Search:** Users can filter animals by type and breed through dropdown menus.
-- **Sample Data:** Includes 20 preloaded dog and cat breeds with age, sex, and outcome type details.
-- **Data Persistence:** MongoDB ensures that data remains consistent and accessible between sessions.
-- **Modular Design:** Separated functionality into clean modules (`animalshelter.py`, `dash_app.py`, `seed_animals.py`).
-
----
-
-## Files
-| File Name | Description |
-|------------|--------------|
-| `animalshelter.py` | Handles MongoDB operations and defines the CRUD methods. |
-| `dash_app.py` | Runs the Dash dashboard for data visualization and filtering. |
-| `seed_animals.py` | Populates the MongoDB collection with 20 sample records of cats and dogs. |
-| `__init__.py` | Initializes the project as a Python package. |
-| `README.md` | Provides project documentation and usage instructions. |
-
----
-
-## Technologies Used
-- **Programming Language:** Python 3  
-- **Database:** MongoDB  
-- **Framework:** Dash (for visualization)  
-- **Libraries:** pandas, pymongo  
-
----
-
-## Skills Demonstrated
-- Database design and CRUD operations  
-- Backend development using Python  
-- Data handling and visualization with Dash  
-- Integration of Python applications with MongoDB  
-- Secure and maintainable software structure  
-
----
-
-## How to Run
-1. **Install dependencies:**
-   ```bash
-   pip install dash pandas pymongo
-   mongod
-   python dashboard/dash_app.py
+Self-Assessment
+Throughout my Computer Science program, I have gained a strong foundation in software development, database management, and secure system design. Completing this program and building my ePortfolio has allowed me to bring together everything I have learned and showcase my technical and professional growth. This ePortfolio represents the culmination of my coursework, showing my ability to design, code, and enhance practical applications that reflect real-world software development. My goal is to continue growing as a data analyst or software developer, combining my healthcare background with my technical expertise to support data-driven decisions in the healthcare field.
+The projects I completed throughout this program helped me build both technical and professional skills. I learned how to manage my time effectively, plan my development process, and communicate progress clearly with peers and instructors. Working on coding projects improved my ability to collaborate, solve problems logically, and present technical ideas in ways that are clear to different audiences. These experiences have strengthened my confidence in communicating with both technical and non-technical stakeholders, an essential skill in any professional computing environment.
+My technical abilities grew significantly over time. I became proficient in Python, Java, and C++, and developed hands-on experience using Android Studio, MongoDB, and Dash. I also deepened my understanding of data structures and algorithms, which allowed me to write efficient and scalable programs. For example, my CS300 Course Planner project used an AVL tree to maintain efficiency in course lookups, while my CS340 Animal Shelter CRUD project showed my ability to build a working database system using Python and MongoDB. My Android Inventory App from CS360 demonstrated secure mobile design through login authentication, role-based access, and session handling. Together, these artifacts show that I can handle both the front-end and back-end aspects of an application while maintaining security and reliability.
+Security has also become one of my priorities as a developer. I learned to design systems that anticipate vulnerabilities and to apply protections such as input validation, authentication, and access control. I also gained a better understanding of the importance of protecting data integrity and privacy, especially in healthcare systems. These practices reflect a mindset that values safety, responsibility, and ethical coding.
+When viewed together, my three artifacts demonstrate the full range of my computer science skills: secure application design, algorithmic efficiency, and database management. Each project builds upon the previous one, showing growth in both complexity and quality. Completing these enhancements helped me meet the program outcomes by demonstrating my ability to design efficient solutions, apply security measures, and use modern tools to deliver real value. This ePortfolio represents my readiness to enter the field as a confident and capable professional who can contribute to developing data-driven and secure software solutions.
