@@ -1,13 +1,11 @@
-# seed_animals.py
-# Insert ~20 sample breeds (dogs + cats) into aac.animals using your AnimalShelter wrapper.
-
+# Import the AnimalShelter class from the animalshelter module
 from animalshelter import AnimalShelter
 
-# Adjust if you’re using username/password or a connection string
-db = AnimalShelter()  # default: localhost:27017, db=aac, coll=animals
+db = AnimalShelter()
 
+# Define a list of documents (each document represents an animal record)
+# Each record includes details such as animal type, breed, age, sex, and outcome type
 docs = [
-    # ---- Dogs (10) ----
     {"animal_type": "Dog", "breed": "Labrador Retriever", "age_upon_outcome": "2 years", "sex_upon_outcome": "Neutered Male", "outcome_type": "Adoption"},
     {"animal_type": "Dog", "breed": "German Shepherd", "age_upon_outcome": "3 years", "sex_upon_outcome": "Spayed Female", "outcome_type": "Adoption"},
     {"animal_type": "Dog", "breed": "Golden Retriever", "age_upon_outcome": "1 year", "sex_upon_outcome": "Intact Male", "outcome_type": "Transfer"},
@@ -19,7 +17,6 @@ docs = [
     {"animal_type": "Dog", "breed": "Dachshund", "age_upon_outcome": "1 year", "sex_upon_outcome": "Spayed Female", "outcome_type": "Adoption"},
     {"animal_type": "Dog", "breed": "German Shorthaired Pointer", "age_upon_outcome": "2 years", "sex_upon_outcome": "Intact Male", "outcome_type": "Adoption"},
 
-    # ---- Cats (10) ----
     {"animal_type": "Cat", "breed": "Domestic Shorthair", "age_upon_outcome": "3 years", "sex_upon_outcome": "Spayed Female", "outcome_type": "Adoption"},
     {"animal_type": "Cat", "breed": "Domestic Medium Hair", "age_upon_outcome": "2 years", "sex_upon_outcome": "Neutered Male", "outcome_type": "Adoption"},
     {"animal_type": "Cat", "breed": "Domestic Longhair", "age_upon_outcome": "6 months", "sex_upon_outcome": "Intact Female", "outcome_type": "Transfer"},
@@ -32,13 +29,21 @@ docs = [
     {"animal_type": "Cat", "breed": "Persian", "age_upon_outcome": "7 years", "sex_upon_outcome": "Spayed Female", "outcome_type": "Transfer"},
 ]
 
+# Initialize a counter to keep track of how many new records were inserted
 inserted = 0
+
+# Loop through each document in the list
 for d in docs:
-    # avoid duplicates by (animal_type, breed)
+    # Check if a record with the same animal_type and breed already exists in the database
     exists = db.read({"animal_type": d["animal_type"], "breed": d["breed"]}, limit=1)
+    
+    # If the record already exists, skip it to avoid duplicates
     if exists and next(exists, None):
         continue
+    
+    # Otherwise, create (insert) a new record in the database
     if db.create(d):
-        inserted += 1
+        inserted += 1  # Increment counter when successful
 
+# Print out how many new records were added to the database
 print(f"Inserted {inserted} new documents.")
