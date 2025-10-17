@@ -83,4 +83,4 @@ While the project now meets all planned goals and course outcomes, future versio
 ## Project Reflection
 This enhanced version fulfills all planned improvements established at the beginning of the course.  
 It demonstrates strong progress in mobile development, secure design, and software engineering best practices.  
-Through this project, I strengthened my understanding of Android architecture, persistent storage, and user-role management—key skills applicable to professional software development.
+Through this project, I strengthened my understanding of Android architecture, persistent storage, and user-role management.
